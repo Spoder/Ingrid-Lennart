@@ -1,0 +1,130 @@
+body {
+  background: #ffcae2;
+  font-family: "Felipa", cursive;
+}
+
+.main {
+  width: 900px;
+  height: 900px;
+  background: url("https://i.postimg.cc/NjSrJx9h/BG.png");
+  background-size: cover;
+  margin: 0 auto;
+  position: relative;
+}
+
+.balloon {
+  z-index: 2;
+  width: 575px;
+  height: 650px;
+  position: absolute;
+  left: 20%;
+  top: 15%;
+  background: url("https://i.postimg.cc/FsGRqV6W/balloon.png") no-repeat;
+  background-size: cover;
+  animation-name: floating;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.cloud-right {
+  z-index: 1;
+  width: 354px;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  background: url("http://jyloo.xyz/assets/img/cloud-right.png") no-repeat;
+  background-size: cover;
+  animation-name: floating;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.cloud-left-top {
+  z-index: 3;
+  width: 262px;
+  height: 173px;
+  position: absolute;
+  left: 10%;
+  top: 20%;
+  background: url("http://jyloo.xyz/assets/img/cloud-right.png") no-repeat;
+  background-size: cover;
+  animation-name: floating;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.cloud-left-bottom {
+  z-index: 1;
+  width: 151px;
+  height: 85px;
+  position: absolute;
+  left: 20%;
+  top: 53%;
+  background: url("http://jyloo.xyz/assets/img/chat.png") no-repeat;
+  background-size: cover;
+  animation: floating 4s infinite ease-in-out, fade 2s 1 ease-in-out;
+}
+
+.message {
+  z-index: 3;
+  width: 200px;
+  height: 158px;
+  position: absolute;
+  left: 55%;
+  top: 53%;
+  background: url("http://jyloo.xyz/assets/img/chat.png") no-repeat;
+  background-size: cover;
+  animation: floating 4s infinite ease-in-out, fade 2s 1 ease-in-out;
+}
+
+.message:after {
+  content: "60 års kärlek";
+  color: #3f3f3f;
+  font-size: 25px;
+  position: absolute;
+  padding: 40px 30px 30px 30px;
+  font-family: "Amatic SC", cursive;
+}
+
+.textL {
+  width: 900px;
+  height: 900px;
+  background-size: cover;
+  margin: 0 auto;
+  position: relative;
+}
+
+.meddelande:after {
+  content: "Det finns vissa människor som inspirerar andra, som visar att kärlek kan uttryckas på många vis och vara hur länge som helst om man vårdar den. Ni har lärt mig att vara snäll, att bry mig om andra samt att även bry mig om mig själv. Att ha er i mitt liv är ovärderligt och jag är mycket tacksam. Ni är en defintion av kärleken för mig.";
+  color: rgb(84, 49, 114);
+  font-size: 25px;
+  font-family: "Amatic SC", cursive;
+  text-align: justify;
+}
+
+@keyframes floating {
+  from {
+    transform: translate(0, 0px);
+  }
+  65% {
+    transform: translate(0, 15px);
+  }
+  to {
+    transform: translate(0, -0px);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translate(0px, 40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
